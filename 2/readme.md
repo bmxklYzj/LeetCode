@@ -1,13 +1,6 @@
 # description
 
-给一个数组nums和一个数target，判断数组中的某两个数相加是否为target，并返回他们的下标
 
-```
-Given nums = [2, 7, 11, 15], target = 9,
-
-Because nums[0] + nums[1] = 2 + 7 = 9,
-return [0, 1].
-```
 
 # solution
 
