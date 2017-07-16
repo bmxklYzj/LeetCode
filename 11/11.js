@@ -1,5 +1,5 @@
 
-
+// tle version
 var maxArea = function(height) {
     var maxRes = -1;
     for (var i = 0; i < height.length; i++) {
@@ -12,3 +12,5 @@ var maxArea = function(height) {
     }
     return maxRes;
 };
+
+// optimize version == 不会啊😂
