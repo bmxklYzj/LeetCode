@@ -10,6 +10,7 @@
 // };
 
 var addBinary = function (a, b) {
+
     var minStr, maxStr;
     if (a.length > b.length) {
         minStr = b;
@@ -18,34 +19,32 @@ var addBinary = function (a, b) {
         minStr = a;
         maxStr = b;
     }
+    minStr = minStr.split('');
+    maxStr = maxStr.split('');
+    minStr.reverse();
+    maxStr.reverse();
+
     let flag = 0;
-    for (let i = minStr.length - 1; i >= 0; i--) {
-        let pos = maxStr.length - (minStr.length - i);
-        let temp = +maxStr[pos] + +minStr[i] + +flag;
-        if (temp > 1) {
-            maxStr[pos] = temp % 2;
+    for (let i = 0; i < maxStr.length; i++) {
+        let minItem = +(minStr[i] ? minStr[i] : 0);
+        let maxItem = +maxStr[i];
+        let sum = minItem + maxItem + flag;
+        if (sum > 1) {
+            maxStr[i] = sum % 2;
             flag = 1;
             continue;
         }
-        maxStr[pos] = temp;
-        flag = 0;
-        break;
-    }
-    console.log(maxStr);
-    for (let i = maxStr.length - minStr.length; i >= 0; i--) {
-        let temp = maxStr[i] + flag;
-        if (temp > 1) {
-            maxStr[i] = temp % 2;
-            flag = 1;
-            continue;
-        }
-        maxStr[i] = temp;
+        maxStr[i] = sum;
         flag = 0;
     }
-    if (flag === 1) {
-        maxStr = '1' + maxStr;
+    if (flag) {
+        maxStr.push(1);
     }
-    return maxStr;
+
+    return maxStr.reverse().join('');
 };
 
-console.log(addBinary('111', '11'));
+console.log(addBinary(
+"10100000100100110110010000010101111011011001101110111111111101000000101111001110001111100001101",
+"110101001011101110001111100110001010100001101011101010000011011011001011101111001100000011011110011"));
+
