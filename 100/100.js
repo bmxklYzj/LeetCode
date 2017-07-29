@@ -14,18 +14,17 @@ var isSameTree = function (p, q) {
     // dfs/bfs 都行
     var equal = true;
     function dfs(curNode, curNode2) {
-        if (curNode === null) {
+        if (curNode === null && curNode === curNode2) {
             return;
         }
-        if (curNode2 === null || curNode.val !== curNode2.val) {
+        if (curNode === null || curNode2 === null || (curNode.val !== curNode2.val)) {
             equal = false;
             return;
         }
+
         dfs(curNode.left, curNode2.left);
         dfs(curNode.right, curNode2.right);
     }
     dfs(p, q);
     return equal;
 };
-
-console.log(isSameTree([], []));
