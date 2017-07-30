@@ -4,7 +4,7 @@
 
 # solution
 
-
+注意：hi这种二叉树的题目本地没法调试
 
 # conclusion
 
