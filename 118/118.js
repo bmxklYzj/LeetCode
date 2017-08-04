@@ -8,19 +8,24 @@ var generate = function(numRows) {
     }
     let half = ~~((numRows + 1) / 2);
     let res = [[1]];
+    let temp = [];
     for (let i = 1; i < numRows; i++) {
-        let temp = [];
+        temp = [];
         for (let j = 0; j <= i; j++) {
-            let leftTop = res[i - 1][j - 1];
+            let pos;
+            let leftTop;
+            if (j === 0) {
+                leftTop = res[i - 1][pos];
+            }
+            leftTop = res[i - 1][j - 1];
             let top = res[i - 1][j];
             leftTop = leftTop ? leftTop : 0;
             top = top ? top : 0;
             temp.push(leftTop + top);
         }
         res.push(temp);
-        // console.log(temp);
     }
-    return res;
+    return temp;
 };
 
-console.log(generate(5));
+console.log(generate(6));
