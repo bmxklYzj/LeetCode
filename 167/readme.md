@@ -25,6 +25,13 @@ var twoSum = function (numbers, target) {
 5
 ```
 
+2. wa
+
+```
+[0,0,3,4]
+0
+应该输出[1,2]
+```
 
 # conclusion
 

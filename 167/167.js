@@ -1,28 +1,34 @@
-/**
- * @param {number[]} numbers
- * @param {number} target
- * @return {number[]}
- */
 var twoSum = function (numbers, target) {
-    let left = 0;
-    let right = numbers.length + 1;
-    let mid;
     // 1234, 5
     // mid = 2,1
-    while (left < right) {
-        mid = ~~((left + right) / 2);
-        let sum = numbers[mid] + numbers[mid + 1];
-        if (sum === target) {
-            break;
-        }
-        if (sum > target) {
-            right = mid;
-        }
-        if (sum < target) {
-            left = mid;
+    // nlog(n)
+    let i;
+    let len;
+    let left;
+    let right;
+    let mid;
+    for (i = 0, len = numbers.length - 1; i < len; i++) {
+        let currentNumber = numbers[i];
+        left = i;
+        right = numbers.length - 1;
+        mid = ~~((left + right + 1) / 2);
+        while (left < right) {
+            let sum = currentNumber + numbers[right];
+            if (sum === target) {
+                return [i + 1, right + 1];
+            }
+            if (sum > target) {
+                left = i;
+                right = mid - 1;
+            }
+            if (sum < target) {
+                left = mid + 1;
+                right = numbers.length - 1;
+            }
+            mid = ~~((left + right + 1) / 2);
         }
     }
-    return [mid, mid + 1];
 };
 
-console.log(twoSum([2, 7, 11, 15], 13));
+console.log(twoSum([3,24,50,79,88,150,345]
+    ,200));
