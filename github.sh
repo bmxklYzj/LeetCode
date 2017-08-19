@@ -1,4 +1,4 @@
 # commit shell，modify commit date before exec
 git add .
-git commit -m 'LeetCode每日一题,js版本：2017-08-17 没做出来'
+git commit -m 'LeetCode每日一题,js版本：2017-08-19 今天没做，明天补上'
 git push
