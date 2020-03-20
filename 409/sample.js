@@ -15,7 +15,6 @@ var longestPalindrome = function(s) {
     }
   }
   let cnt = 0;
-  console.log(Object.values(obj));
   let hasOdd = false;
   Object.values(obj).forEach(value => {
     const isEven = value % 2 === 0;

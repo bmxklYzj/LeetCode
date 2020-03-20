@@ -1,5 +1,6 @@
 // https://leetcode-cn.com/problems/longest-palindrome/
 
+// 比第一版本稍微优化点，第一次遍历时候只需要知道有奇数字符的个数，有奇数字符最终cnt+1
 /**
  * @param {string} s
  * @return {number}
