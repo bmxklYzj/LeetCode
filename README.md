@@ -2,7 +2,7 @@
 
 每日算法练习
 
-每个文件夹是一个题目，文件夹命名格式为 `2020-03-23_leetcode-1_problemName` ，
+每个文件夹是一个题目，文件夹命名格式为 `2020-03-23_leetcode-problemNumber-problemName` ，
 
 在readme中：
 
