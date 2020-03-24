@@ -62,7 +62,6 @@ var middleNode = function(head) {
 
 ```js
 /**
- *
  * Definition for singly-linked list.
  * function ListNode(val) {
  *     this.val = val;
@@ -75,14 +74,21 @@ var middleNode = function(head) {
  */
 var middleNode = function(head) {
   let temp = head;
-  let arr = [];
+  let length = 0;
   while (temp) {
-    arr.push(temp);
+    length++;
+    // console.log('temp', JSON.stringify(temp));
     temp = temp.next;
   }
-  console.log(arr);
-  return arr[Math.floor((arr.length) / 2)];
+  // console.log(length);
+  let mid = Math.ceil((length + 1) / 2);
+  temp = head;
+  while (--mid) {
+    temp = temp.next;
+  }
+  return temp;
 };
+
 ```
 ### Time/Space complexity
 
