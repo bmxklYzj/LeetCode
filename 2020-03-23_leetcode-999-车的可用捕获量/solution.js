@@ -15,6 +15,7 @@ var numRookCaptures = function(board) {
     }
     if (cur === 'p') {
       cnt++;
+      break;
     }
   }
   for (let i = posR[0]; i >= 0; i--) {
@@ -24,6 +25,7 @@ var numRookCaptures = function(board) {
     }
     if (cur === 'p') {
       cnt++;
+      break;
     }
   }
   for (let i = posR[1]; i >= 0; i--) {
@@ -33,6 +35,7 @@ var numRookCaptures = function(board) {
     }
     if (cur === 'p') {
       cnt++;
+      break;
     }
   }
   for (let i = posR[1]; i < n; i++) {
@@ -42,6 +45,7 @@ var numRookCaptures = function(board) {
     }
     if (cur === 'p') {
       cnt++;
+      break;
     }
   }
   return cnt;
