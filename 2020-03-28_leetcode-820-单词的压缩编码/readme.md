@@ -26,7 +26,7 @@ var minimumLengthEncoding = function(words) {
     let len = arr.length;
     let j = 0;
     for (j = 0; j < len; j++) {
-      if (words[i].endsWith(arr[j])) {
+      if (words[i].endsWith(arr[j])) { // 注意使用endsWith 而不是 indexOf !== -1
         arr.splice(j, 1, words[i]);
         break;
       } else if (arr[j].endsWith(words[i])) {
