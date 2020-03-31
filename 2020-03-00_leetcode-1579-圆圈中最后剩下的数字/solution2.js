@@ -1,5 +1,6 @@
 // https://leetcode-cn.com/problems/yuan-quan-zhong-zui-hou-sheng-xia-de-shu-zi-lcof/
 
+//链表解法没成功
 /**
  * @param {number} n
  * @param {number} m
