@@ -1,8 +1,6 @@
 ## Description
 
-题目不好。
 
-奇偶相间地把(分别放到A和B组
 
 ## Solution
 
