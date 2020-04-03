@@ -102,3 +102,38 @@ function swap(arr, i, j) {
 
 - 时间复杂度：O(N^2)
 - 空间复杂度：O(N)
+
+
+## Solution 3：快速排序
+
+每一轮 选择一个数，小于它的放leftArr，大于它的放rightArr，再分治对两遍数组排序。
+
+基本条件是 arr.length <= 1 就停止排序。
+
+```js
+/**
+ * @param {number[]} arr
+ * @return {number[]}
+ */
+var quickSort = function(arr) {
+  if (arr.length <= 1) {
+    return arr;
+  }
+  const mid = arr[0];
+  const left = [];
+  const right = [];
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] <= mid) {
+      left.push(arr[i]);
+    } else {
+      right.push(arr[i]);
+    }
+  }
+  return [...quickSort(left), mid, ...quickSort(right)];
+};
+```
+
+### Time/Space complexity
+
+- 时间复杂度：O(n * log(n))
+- 空间复杂度：O(N)
