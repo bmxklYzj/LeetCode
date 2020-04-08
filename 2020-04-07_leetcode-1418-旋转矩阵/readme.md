@@ -2,7 +2,7 @@
 
 [旋转矩阵](https://leetcode-cn.com/problems/rotate-matrix-lcci/)
 
-给一个 N x N 的矩阵，将其旋转90度。
+给一个 N x N 的矩阵，将其顺时针旋转90度。
 
 ## Solution 1
 

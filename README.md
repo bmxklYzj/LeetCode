@@ -16,3 +16,6 @@
 todo: 
 
 - 2020-03-24_leetcode-1496-按摩师
+- dp: 编辑距离 https://leetcode-cn.com/problems/edit-distance/
+- dp: 460. LFU缓存 https://leetcode-cn.com/problems/lfu-cache/
+- dp: 接雨水 https://leetcode-cn.com/problems/trapping-rain-water/
