@@ -1,9 +1,11 @@
 ## Description
 
+[括号生成](https://leetcode-cn.com/problems/generate-parentheses/)
+
 n代表生成括号的对数，输出组成n对有效括号的所有情况。
 
 ![desc](https://tva1.sinaimg.cn/large/00831rSTly1gdnxrajdhoj30xg0gcaa9.jpg)
-
+[]
 ## Solution
 
 先枚举所有情况，长度为n*2，每一次可以放置 ( 或 )
