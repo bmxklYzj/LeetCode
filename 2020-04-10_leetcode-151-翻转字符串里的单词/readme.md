@@ -63,5 +63,5 @@ var reverseWords = function(s) {
 
 ### Time/Space complexity
 
-- 时间复杂度：
-- 空间复杂度：
+- 时间复杂度：O(N)
+- 空间复杂度：O(1)
